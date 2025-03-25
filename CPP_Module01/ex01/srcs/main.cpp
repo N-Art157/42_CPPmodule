@@ -1,32 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 23:50:12 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/24 23:51:38 by nakagawashi      ###   ########.fr       */
+/*   Created: 2025/03/24 17:50:51 by nakagawashi       #+#    #+#             */
+/*   Updated: 2025/03/24 23:24:59 by nakagawashi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "Zombie.hpp"
 
-Weapon::Weapon(std::string type)
-{
-	this->type_ = type;
-}
+#define NUM 5
 
-Weapon::~Weapon()
-{
-}		
+Zombie* zombieHorde(int N, std::string name);
 
-const std::string&	Weapon::getType(void) const
+int	main(void)
 {
-	return (this->type_);
-}
+	std::cout << "Creating many zombies." << std::endl;
+	Zombie* horde = zombieHorde(NUM, "Zombie");
 
-void	Weapon::setType(std::string type)
-{
-	this->type_ = type;
+	if (horde == NULL)
+	{
+		std::cout << "Error: Memory allocation failed." << std::endl;
+		return (1);
+	}
+	for (int i = 0; i < NUM; i++)
+	{
+		horde[i].announce();
+	}
+	delete[] horde;
+	return (0);
 }

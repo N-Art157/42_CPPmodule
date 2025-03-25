@@ -6,12 +6,12 @@
 #    By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 23:28:23 by nakagawashi       #+#    #+#              #
-#    Updated: 2025/03/25 20:40:36 by nakagawashi      ###   ########.fr        #
+#    Updated: 2025/03/25 15:52:16 by nakagawashi      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= violence
-SRCS 		= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+NAME 		= harl
+SRCS 		= main.cpp Harl.cpp
 OBJS 		= $(SRCS:.cpp=.o)
 CXX 		= c++
 CXXFLAGS 	= -Wall -Wextra -Werror -std=c++98

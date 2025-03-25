@@ -5,30 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/24 23:42:06 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/25 00:00:41 by nakagawashi      ###   ########.fr       */
+/*   Created: 2025/03/25 17:42:04 by nakagawashi       #+#    #+#             */
+/*   Updated: 2025/03/25 20:38:10 by nakagawashi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanA.hpp"
-#include "HumanB.hpp"
+#include "Harl.hpp"
 
 int	main(void)
 {
+	std::string	input;	
+	Harl		harl;
+
+	std::cout << "Please enter the level of complaint." << std::endl;
+	std::cout << "DEBUG, INFO, WARNING, ERROR" << std::endl;
+	while (1)
 	{
-		Weapon		club = Weapon("crude spiked club");
-		HumanA bob("Bob", club);
-		bob.attack();
-		club.setType("some other type of club");
-		bob.attack();
+		std::cout << ">" << std::flush;
+		std::cin >> input;
+		if (std::cin.eof() || input == "EXIT" || input == "exit")
+		{
+			std::cout << "\nExiting program." << std::endl;
+			return (0);
+		}
+		harl.complain(input);
 	}
-	{
-		Weapon		club = Weapon("crude spiked club");
-		HumanB jim("Jim");
-		jim.setWeapon(club);
-		jim.attack();
-		club.setType("some other type of club");
-		jim.attack();
-	}
+	
 	return (0);
-}
+}	

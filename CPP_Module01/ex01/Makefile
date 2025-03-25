@@ -6,15 +6,17 @@
 #    By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 23:28:23 by nakagawashi       #+#    #+#              #
-#    Updated: 2025/03/25 20:40:36 by nakagawashi      ###   ########.fr        #
+#    Updated: 2025/03/24 23:38:06 by nakagawashi      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME 		= violence
-SRCS 		= main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+NAME 		= zombie
+SRCS_DIR 	= srcs/
+SRCS 		= main.cpp Zombie.cpp zombieHorde.cpp
+SRCS		:= $(addprefix $(SRCS_DIR), $(SRCS))
 OBJS 		= $(SRCS:.cpp=.o)
 CXX 		= c++
-CXXFLAGS 	= -Wall -Wextra -Werror -std=c++98
+CXXFLAGS 	= -Wall -Wextra -Werror -std=c++98 -Iinclude
 
 all: $(NAME)
 
