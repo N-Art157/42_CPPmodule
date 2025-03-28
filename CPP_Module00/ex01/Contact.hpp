@@ -6,7 +6,7 @@
 /*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 10:49:19 by nakagawashi       #+#    #+#             */
-/*   Updated: 2024/10/12 15:39:28 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/28 16:25:29 by nakagawashi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #define CONTACT_HPP
 
 # include <iostream>
-
+# include <iomanip>
 
 class Contact
 {
@@ -23,6 +23,10 @@ class Contact
 			~Contact();
 			void		Init(void);
 			std::string	GetInput(std::string str);
+			void		DisplayCollum(void) const;
+			void		DisplayALL(void);
+			void		setIndex(int index);
+			std::string	GetTenChar(std::string str) const;
 
 	private:
 			std::string		first_name_;
