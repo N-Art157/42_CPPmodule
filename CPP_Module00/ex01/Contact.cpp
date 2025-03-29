@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Contact.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 23:39:44 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/28 18:29:42 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/29 14:41:45 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ std::string	Contact::GetInput(std::string str)
     }
 	return (input);
 }
+
 void	Contact::Init(void)
 {
 	std::cin.ignore();
