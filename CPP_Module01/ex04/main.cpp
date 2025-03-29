@@ -6,16 +6,22 @@
 /*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 14:32:56 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/29 15:43:24 by anakagaw         ###   ########.fr       */
+/*   Updated: 2025/03/29 18:06:05 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <sstream>
 
-std::string	ft_replace(std::string content, std::string s1, std::string s2)
+std::string	FtReplace(std::string content, std::string s1, std::string s2)
 {
+	if (s1.empty())
+	{
+		std::cout  << "Warning: The string to replace (s1) cannnot be empty." << std::endl;
+		return (content);
+	}
 	std::string	result;
 	size_t	pos = 0;
 	size_t 	found = content.find(s1, pos);
@@ -48,11 +54,12 @@ int	main(int argc, char *argv[])
 		return (1);
 	}
 	
-	std::string	content((std::istreambuf_iterator<char>(inFile)), 
-						std::istreambuf_iterator<char>());
+	std::ostringstream buffer;
+	buffer << inFile.rdbuf();
+	std::string	content = buffer.str();
 	inFile.close();
 
-	std::string	result = ft_replace(content, s1, s2);
+	std::string	result = FtReplace(content, s1, s2);
 
 	std::ofstream	Outfile((filename + ".replace").c_str());
 	if (!Outfile.is_open())

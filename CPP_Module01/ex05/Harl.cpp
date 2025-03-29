@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Harl.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 16:11:29 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/25 20:34:44 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/29 18:20:13 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ void	Harl::complain(std::string level)
 			return ;
 		}
 	}
+	std::cout << "Invalid level." << std::endl;
 }
 
 void	Harl::debug(void)

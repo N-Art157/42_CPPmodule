@@ -3,17 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 17:19:53 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/24 17:36:56 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/29 16:39:46 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
-
-Zombie* newZombie(std::string name);
-void randomChump(std::string name);
 
 int	main(void)
 {

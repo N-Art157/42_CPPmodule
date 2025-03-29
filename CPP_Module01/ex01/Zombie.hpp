@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 19:20:38 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/25 00:08:34 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/29 16:45:07 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,7 @@ class Zombie
 			void announce(void) const;
 			void setName(std::string name);
 };
+
+Zombie* zombieHorde(int N, std::string name);
 
 #endif
