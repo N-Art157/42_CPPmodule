@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/24 17:50:51 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/24 23:24:59 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/29 15:31:23 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(void)
 	std::cout << "Creating many zombies." << std::endl;
 	Zombie* horde = zombieHorde(NUM, "Zombie");
 
-	if (horde == NULL)
+	if (horde == nullptr)
 	{
 		std::cout << "Error: Memory allocation failed." << std::endl;
 		return (1);

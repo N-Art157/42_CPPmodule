@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/25 14:32:56 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/25 15:44:03 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/29 15:43:24 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ int	main(int argc, char *argv[])
 	std::string 	s1 = argv[2];
 	std::string 	s2 = argv[3];
 	
-	std::ifstream	inFile(filename);
+	std::ifstream	inFile(filename.c_str());
 	if (!inFile.is_open())
 	{
 		std::cout << "Error: Cannot open file." << std::endl;
@@ -54,7 +54,7 @@ int	main(int argc, char *argv[])
 
 	std::string	result = ft_replace(content, s1, s2);
 
-	std::ofstream	Outfile(filename + ".replace");
+	std::ofstream	Outfile((filename + ".replace").c_str());
 	if (!Outfile.is_open())
 	{
 		std::cout << "Error: Cannot create file." << std::endl;
