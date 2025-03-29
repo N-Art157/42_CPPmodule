@@ -6,12 +6,13 @@
 /*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 23:39:44 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/29 14:41:45 by anakagaw         ###   ########.fr       */
+/*   Updated: 2025/03/29 14:59:32 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 #include <iostream>
+#include <cstdlib>
 
 Contact::Contact(void)
 {
