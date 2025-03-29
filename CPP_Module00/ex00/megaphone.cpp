@@ -6,20 +6,22 @@
 /*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 01:24:36 by nakagawashi       #+#    #+#             */
-/*   Updated: 2024/10/08 02:39:24 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/29 14:18:34 by nakagawashi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <string>
+#include <cctype>
 
-std::string ToUpper(std::string s)
+std::string ToUpper(const std::string& s)
 {
-	for (int i = 0; i < int(s.length()); i++)
-	{
-		s[i] = toupper(s[i]);
-	}
-	return (s);
+    std::string result = s;
+    for (size_t i = 0; i < result.length(); i++)
+    {
+        result[i] = std::toupper(result[i]);
+    }
+    return result;
 }
 
 int	main(int argc, char **argv)

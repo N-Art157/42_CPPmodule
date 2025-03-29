@@ -6,7 +6,7 @@
 /*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/08 23:39:38 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/28 18:34:40 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/29 14:34:09 by nakagawashi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,19 +46,22 @@ void	PhoneBook::SearchContact(void)
 		this->contacts_[i].DisplayCollum();
 	}
 	std::cout << "Please enter the index." << std::endl;
-	std::cout << ">" << std::flush;
 	std::string	input;
-	std::cin >> input;
-	if (std::cin.eof())
+	while (true)
 	{
-		std::cout << "\nInput canceled. Exiting program." << std::endl;
-		exit(0);
-	}
-	while (input.length() != 1 || input[0] < '0' || input[0] > '7')
-	{
-		std::cout << "Invalid index." << std::endl;
 		std::cout << ">" << std::flush;
 		std::cin >> input;
+		if (std::cin.eof())
+		{
+			std::cin.clear();
+			std::cout << "\nInput canceled. Exiting program." << std::endl;
+			exit(0);
+		}
+		if (input.length() == 1 && input[0] >= '0' && input[0] <= '7')
+			break;
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		std::cout << "Invalid index." << std::endl;
 	}	
 	int	index = input[0] - '0';
 	this->contacts_[index].DisplayALL();

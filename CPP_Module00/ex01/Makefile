@@ -6,7 +6,7 @@
 #    By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 23:28:23 by nakagawashi       #+#    #+#              #
-#    Updated: 2024/10/12 15:40:15 by nakagawashi      ###   ########.fr        #
+#    Updated: 2025/03/29 14:20:43 by nakagawashi      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ clean:
 fclean: clean
 		rm -rf $(NAME)
 
-re:
-		fclean all
+re: fclean all
 
 .PHONY: all clean fclean re
