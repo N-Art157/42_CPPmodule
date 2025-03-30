@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
+/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 22:34:11 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/30 17:04:30 by anakagaw         ###   ########.fr       */
+/*   Updated: 2025/03/31 01:59:39 by nakagawashi      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,17 +91,24 @@ bool	Fixed::operator!=(const Fixed &fixed) const
 
 Fixed	Fixed::operator+(const Fixed &fixed) const
 {
-	return (Fixed(this->toFloat() + fixed.toFloat()));
+	Fixed result;
+	result.value_ = this->value_ + fixed.getRawBits();
+	return (result);
 }
 
 Fixed	Fixed::operator-(const Fixed &fixed) const
 {
-	return (Fixed(this->toFloat() - fixed.toFloat()));
+	Fixed result;
+	result.value_ = this->value_ - fixed.getRawBits();
+	return (result);
 }
 
 Fixed	Fixed::operator*(const Fixed &fixed) const
 {
-	return (Fixed(this->toFloat() * fixed.toFloat()));
+	Fixed result;
+	long tmp = static_cast<long>(this->value_ ) * static_cast<long>(fixed.getRawBits());
+	result.value_ = static_cast<int>(tmp >> this->fractional_bits_);
+	return (result);
 }
 
 Fixed	Fixed::operator/(const Fixed &fixed) const
@@ -111,7 +118,10 @@ Fixed	Fixed::operator/(const Fixed &fixed) const
 		std::cerr << "Error: Division by zero" << std::endl;
 		return (Fixed(0));
 	}
-	return (Fixed(this->toFloat() / fixed.toFloat()));
+	Fixed result;
+	long tmp = static_cast<long>(this->value_) << this->fractional_bits_;
+	result.value_ = static_cast<int>(tmp / fixed.getRawBits());
+	return (result);
 }
 
 Fixed	&Fixed::operator++()
