@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/28 22:34:11 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/30 15:03:41 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/30 17:04:30 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,6 +106,11 @@ Fixed	Fixed::operator*(const Fixed &fixed) const
 
 Fixed	Fixed::operator/(const Fixed &fixed) const
 {
+	if (fixed.getRawBits() == 0)
+	{
+		std::cerr << "Error: Division by zero" << std::endl;
+		return (Fixed(0));
+	}
 	return (Fixed(this->toFloat() / fixed.toFloat()));
 }
 
