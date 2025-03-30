@@ -6,7 +6,7 @@
 #    By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 23:28:23 by nakagawashi       #+#    #+#              #
-#    Updated: 2025/03/28 22:40:52 by nakagawashi      ###   ########.fr        #
+#    Updated: 2025/03/30 15:36:45 by nakagawashi      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,9 @@ all: $(NAME)
 $(NAME): $(OBJS)
 		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+	
 clean:
 		rm -rf $(OBJS)
 
