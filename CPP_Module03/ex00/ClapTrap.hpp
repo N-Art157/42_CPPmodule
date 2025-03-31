@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 18:11:10 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/31 02:19:36 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/31 11:10:26 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define CLAPTRAP_HPP
 
 #include <string>
+#include <iostream>
+#include <limits>
 
 class ClapTrap
 {

@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 03:02:14 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/31 03:46:42 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/31 11:06:55 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FragTRAP_HPP
 # define FragTRAP_HPP
 
-# include <string>
 # include "ClapTrap.hpp"
 
 class FragTrap : public ClapTrap

@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 03:02:01 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/31 03:25:09 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/31 11:07:13 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScavTrap.hpp"
-#include <iostream>
 
 ScavTrap::ScavTrap(const std::string& name) : ClapTrap(name)
 {

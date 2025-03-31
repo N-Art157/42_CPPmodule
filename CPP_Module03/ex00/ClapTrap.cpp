@@ -3,14 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ClapTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/30 18:28:35 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/31 02:57:32 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/31 11:12:48 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(const std::string& name) : name_(name), hitPoints_(10), energyPoints_(10), attackDamage_(0)
@@ -88,9 +87,9 @@ void ClapTrap::beRepaired(unsigned int amount)
 			  << amount << " hit points!" << std::endl;
 	energyPoints_--;
 	unsigned long tmp = hitPoints_ + amount;
-	if (tmp >= UINT32_MAX)
+	if (tmp >= std::numeric_limits<unsigned int>::max())
 	{
-		hitPoints_ = UINT32_MAX;
+		hitPoints_ = std::numeric_limits<unsigned int>::max();
 		std::cout << "ClapTrap " << name_ << "'s hit points are now maxed out!" << std::endl;
 	}
 	else

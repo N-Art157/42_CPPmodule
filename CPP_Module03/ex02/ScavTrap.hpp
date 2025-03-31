@@ -3,17 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 03:02:14 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/31 03:06:25 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/31 11:07:03 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SCAVTRAP_HPP
 # define SCAVTRAP_HPP
 
-# include <string>
 # include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap

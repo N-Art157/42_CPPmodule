@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 03:02:01 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/31 03:48:19 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/03/31 11:06:36 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "FragTrap.hpp"
-#include <iostream>
 
 FragTrap::FragTrap(const std::string& name) : ClapTrap(name)
 {
