@@ -6,7 +6,7 @@
 /*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 03:02:01 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/31 11:06:36 by anakagaw         ###   ########.fr       */
+/*   Updated: 2025/03/31 11:45:57 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ FragTrap::~FragTrap()
 
 void FragTrap::highFivesGuys(void)
 {
+	if (hitPoints_ == 0)
+	{
+		std::cout << "FragTrap " << name_ << " tries to request a high five but can't because it has no hit points left!" << std::endl;
+		return ;
+	}
 	std::cout << "FragTrap " << name_ << " requests a high five!" << std::endl;
 }
 

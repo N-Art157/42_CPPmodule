@@ -6,7 +6,7 @@
 /*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 03:02:01 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/03/31 11:07:13 by anakagaw         ###   ########.fr       */
+/*   Updated: 2025/03/31 11:45:42 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,11 @@ ScavTrap::~ScavTrap()
 
 void ScavTrap::guardGate() const
 {
+	if (hitPoints_ == 0)
+	{
+		std::cout << "ScavTrap " << name_ << " tries to be in Gate keeper mode but can't because it has no hit points left!" << std::endl;
+		return ;
+	}
 	std::cout << "ScavTrap is now in Gate keeper mode" << std::endl;
 }
 
