@@ -6,7 +6,7 @@
 #    By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/08 23:28:23 by nakagawashi       #+#    #+#              #
-#    Updated: 2025/04/01 14:28:08 by nakagawashi      ###   ########.fr        #
+#    Updated: 2025/04/01 15:53:48 by nakagawashi      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ CXXFLAGS 	= -Wall -Wextra -Werror -std=c++98
 all: $(NAME)
 
 $(NAME): $(OBJS)
-		$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
+		$(CXX) $(CXXFLAGS) $^ -o $@
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
@@ -30,6 +30,8 @@ clean:
 fclean: clean
 		rm -rf $(NAME)
 
-re: fclean all
+re: 
+		@$(MAKE) fclean
+		@$(MAKE) all
 
 .PHONY: all clean fclean re
