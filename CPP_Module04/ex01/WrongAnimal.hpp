@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 14:29:14 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/04/01 13:39:09 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/04/01 16:58:07 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class WrongAnimal
 	public:
 		WrongAnimal(std::string type = "WrongAnimal");
 		WrongAnimal(const WrongAnimal& other);
-		~WrongAnimal();
+		virtual ~WrongAnimal();
 		WrongAnimal& operator=(const WrongAnimal& other);
 
 		void makeSound() const;

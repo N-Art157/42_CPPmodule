@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nakagawashinta <nakagawashinta@student.    +#+  +:+       +#+        */
+/*   By: anakagaw <anakagaw@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/31 14:27:28 by nakagawashi       #+#    #+#             */
-/*   Updated: 2025/04/01 15:02:20 by nakagawashi      ###   ########.fr       */
+/*   Updated: 2025/04/01 17:01:46 by anakagaw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
